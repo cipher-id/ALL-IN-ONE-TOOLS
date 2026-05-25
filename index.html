@@ -3,160 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+
     <title>CIPHER</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <div class="sidebar">
 
         <h1 class="logo">CIPHER</h1>
 
         <ul>
-            <li class="active" id="home-menu">HOME</li>
-            <li id="tiktok-menu">TikTok</li>
-            <li id="next-menu">next update</li>
-            <li id="setelan-menu">Setelan</li>
+
+            <li class="active" id="home-menu">
+                HOME
+            </li>
+
+            <li id="tiktok-menu">
+                TikTok
+            </li>
+
+            <li id="next-menu">
+                Next Update
+            </li>
+
+            <li id="setelan-menu">
+                Setelan
+            </li>
+
         </ul>
 
     </div>
 
-    <!-- Main -->
+    <!-- MAIN -->
     <div class="main">
 
-        <!-- Navbar -->
+        <!-- NAVBAR -->
         <div class="navbar">
 
-            <h2 id="navbar-title">HOME</h2>
+            <h2 id="navbar-title">
+                HOME
+            </h2>
 
         </div>
 
-    
+        <!-- HOME PAGE -->
+        <div class="content" id="home-page">
 
-            <div class="content" id="home-page">
+            <div class="hero">
 
-    <div class="hero">
+                <h1>
+                    SELAMAT DATANG DI CIPHER
+                </h1>
 
-        <h1>
-            SELAMAT DATANG DI CIPHER
-        </h1>
+                <p>
+                    Platform untuk berbagai tools kebutuhan anda.
+                </p>
 
-        <p>
-            Platform untuk berbagai tools kebutuhan anda.
-        </p>
+            </div>
 
-        
-    </div>
+            <div class="info-box">
 
-     <!-- TikTok Page -->
+                <h2>INFORMASI</h2>
 
-<div class="content hidden" id="tiktok-page">
+                <p>
+                    Gunakan menu sidebar untuk membuka tools yang tersedia.
+                </p>
 
-    <div class="hero">
+                <p>
+                    Website ini akan terus mendapatkan update tools baru.
+                </p>
 
-        <h1>
-            TIKTOK DOWNLOADER
-        </h1>
+                <p>
+                    Pilih tools sesuai kebutuhan Anda.
+                </p>
 
-        <p>
-            Download video TikTok MP4 dan MP3.
-        </p>
+            </div>
 
-    </div>
+        </div>
 
-    <div class="info-box">
+        <!-- TIKTOK PAGE -->
+        <div class="content hidden" id="tiktok-page">
 
-        <h2>DOWNLOAD</h2>
+            <div class="hero">
 
-        <input 
-        type="text" 
-        placeholder="Paste link TikTok..."
-        class="input-box">
+                <h1>
+                    TIKTOK DOWNLOADER
+                </h1>
 
-        <button class="download-btn">
-            DOWNLOAD
-        </button>
+                <p>
+                    Download video TikTok MP4 dan MP3.
+                </p>
 
-    </div>
+            </div>
 
-</div>           
+            <div class="info-box">
 
-   <!-- UPDATE PAGE -->
+                <h2>DOWNLOAD</h2>
 
-<div class="content hidden" id="next-page">
+                <input 
+                type="text"
+                placeholder="Paste link TikTok..."
+                class="input-box">
 
-    <div class="hero">
+                <button class="download-btn">
+                    DOWNLOAD
+                </button>
 
-        <h1>
-            NEXT UPDATE 
-        </h1>
+            </div>
 
-        <p>
-            Tools baru akan segera ditambahkan.
-        </p>
+        </div>
 
-    </div>
+        <!-- NEXT UPDATE PAGE -->
+        <div class="content hidden" id="next-page">
 
-    <div class="info-box">
+            <div class="hero">
 
-        <h2>UPDATE SELANJUTNYA</h2>
+                <h1>
+                    NEXT UPDATE
+                </h1>
 
+                <p>
+                    Tools baru akan segera ditambahkan.
+                </p>
 
-    </div>
+            </div>
 
-</div>             
+            <div class="info-box">
 
-   <!-- SETTINGS PAGE -->
+                <h2>UPDATE SELANJUTNYA</h2>
 
-<div class="content hidden" id="setelan-page">
+                <p>• YouTube Downloader</p>
+                <p>• Instagram Downloader</p>
+                <p>• Base64 Tools</p>
+                <p>• JSON Formatter</p>
+                <p>• Password Generator</p>
 
-    <div class="hero">
+            </div>
 
-        <h1>
-            Setelan
-        </h1>
+        </div>
 
-        <p>
-            Pengaturan website dan tampilan.
-        </p>
+        <!-- SETELAN PAGE -->
+        <div class="content hidden" id="setelan-page">
 
-    </div>
+            <div class="hero">
 
-    <div class="info-box">
+                <h1>
+                    SETELAN
+                </h1>
 
-        <h2>PREFERENCES</h2>
+                <p>
+                    Pengaturan website dan tampilan.
+                </p>
 
-        <p>• Dark Mode : Active</p>
-        <p>• Theme : Cyberpunk</p>
-        <p>• Version : v1.0</p>
+            </div>
 
-    </div>
+            <div class="info-box">
 
-</div>             
+                <h2>PREFERENCES</h2>
 
-    <div class="info-box">
-
-        <h2>INFORMASI</h2>
-
-        <p>
-            Gunakan menu sidebar untuk membuka tools yang tersedia.
-        </p>
-
-        <p>
-            Website ini akan terus mendapatkan update tools baru.
-        </p>
-
-        <p>
-            Pilih tools sesuai kebutuhan Anda.
-        </p>
-
-    </div>
+                <p>• Dark Mode : Active</p>
+                <p>• Theme : Cyberpunk</p>
+                <p>• Version : v1.0</p>
 
             </div>
 
@@ -165,5 +181,6 @@
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
