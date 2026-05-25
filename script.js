@@ -185,3 +185,11 @@ clearBtn.addEventListener("click", () => {
     result.innerHTML = "";
 
 });
+
+/* TOGGLE SIDEBAR */
+
+menuToggle.addEventListener("click", () => {
+
+    sidebar.classList.toggle("active-sidebar");
+
+});
