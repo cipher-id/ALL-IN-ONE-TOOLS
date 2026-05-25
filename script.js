@@ -1,23 +1,29 @@
+/* MENU */
+
 const homeMenu = document.getElementById("home-menu");
 const tiktokMenu = document.getElementById("tiktok-menu");
-const updateMenu = document.getElementById("update-menu");
-const settingsMenu = document.getElementById("settings-menu");
+const nextMenu = document.getElementById("next-menu");
+const setelanMenu = document.getElementById("setelan-menu");
+
+/* PAGE */
 
 const homePage = document.getElementById("home-page");
 const tiktokPage = document.getElementById("tiktok-page");
-const updatePage = document.getElementById("update-page");
-const settingsPage = document.getElementById("settings-page");
+const nextPage = document.getElementById("next-page");
+const setelanPage = document.getElementById("setelan-page");
+
+/* NAVBAR */
 
 const navbarTitle = document.getElementById("navbar-title");
 
-/* ALL PAGES */
+/* HIDE ALL PAGE */
 
 function hideAllPages(){
 
     homePage.classList.add("hidden");
     tiktokPage.classList.add("hidden");
-    updatePage.classList.add("hidden");
-    settingsPage.classList.add("hidden");
+    nextPage.classList.add("hidden");
+    setelanPage.classList.add("hidden");
 
 }
 
@@ -27,8 +33,8 @@ function removeActive(){
 
     homeMenu.classList.remove("active");
     tiktokMenu.classList.remove("active");
-    updateMenu.classList.remove("active");
-    settingsMenu.classList.remove("active");
+    nextMenu.classList.remove("active");
+    setelanMenu.classList.remove("active");
 
 }
 
@@ -56,38 +62,38 @@ tiktokMenu.addEventListener("click", () => {
 
     tiktokPage.classList.remove("hidden");
 
-    navbarTitle.innerText = "tiktok";
+    navbarTitle.innerText = "TIKTOK";
 
     tiktokMenu.classList.add("active");
 
 });
 
-/* UPDATE */
+/* NEXT UPDATE */
 
-updateMenu.addEventListener("click", () => {
+nextMenu.addEventListener("click", () => {
 
     hideAllPages();
     removeActive();
 
-    updatePage.classList.remove("hidden");
+    nextPage.classList.remove("hidden");
 
-    navbarTitle.innerText = "next update";
+    navbarTitle.innerText = "NEXT UPDATE";
 
-    updateMenu.classList.add("active");
+    nextMenu.classList.add("active");
 
 });
 
-/* SETTINGS */
+/* SETELAN */
 
-settingsMenu.addEventListener("click", () => {
+setelanMenu.addEventListener("click", () => {
 
     hideAllPages();
     removeActive();
 
-    settingsPage.classList.remove("hidden");
+    setelanPage.classList.remove("hidden");
 
-    navbarTitle.innerText = "Setelan";
+    navbarTitle.innerText = "SETELAN";
 
-    settingsMenu.classList.add("active");
+    setelanMenu.classList.add("active");
 
 });
