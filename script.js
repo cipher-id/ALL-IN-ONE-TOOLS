@@ -8,6 +8,7 @@ const tiktokMenu = document.getElementById("tiktok-menu");
 const nextMenu = document.getElementById("next-menu");
 const setelanMenu = document.getElementById("setelan-menu");
 const youtubeMenu = document.getElementById("youtube-menu");
+const passwordMenu = document.getElementById("password-menu");
 
 /* PAGE */
 
@@ -16,6 +17,7 @@ const tiktokPage = document.getElementById("tiktok-page");
 const nextPage = document.getElementById("next-page");
 const setelanPage = document.getElementById("setelan-page");
 const youtubePage = document.getElementById("youtube-page");
+const passwordPage = document.getElementById("password-page");
 
 /* NAVBAR */
 
@@ -30,6 +32,7 @@ function hideAllPages(){
     nextPage.classList.add("hidden");
     setelanPage.classList.add("hidden");
     youtubePage.classList.add("hidden");
+    passwordPage.classList.add("hidden");
 
 }
 
@@ -302,4 +305,21 @@ youtubeClearBtn.addEventListener("click", () => {
 
 });
 
+});
+
+/* PASSWORD */
+
+passwordMenu.addEventListener("click", () => {
+
+    hideAllPages();
+    removeActive();
+
+    passwordPage.classList.remove("hidden");
+
+    navbarTitle.innerText = "PASSWORD";
+
+    passwordMenu.classList.add("active");
+
+    sidebar.classList.remove("active-sidebar");
+    passwordMenu.classList.remove("active");
 });
