@@ -168,3 +168,17 @@ downloadBtn.addEventListener("click", async () => {
     }
 
 });
+
+/* CLEAR BUTTON */
+
+const clearBtn = document.getElementById("clear-btn");
+
+clearBtn.addEventListener("click", () => {
+
+    /* CLEAR INPUT */
+    tiktokUrl.value = "";
+
+    /* CLEAR RESULT */
+    result.innerHTML = "";
+
+});
