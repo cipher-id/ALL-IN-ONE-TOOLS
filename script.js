@@ -56,7 +56,7 @@ tiktokMenu.addEventListener("click", () => {
 
     tiktokPage.classList.remove("hidden");
 
-    navbarTitle.innerText = "TIKTOK";
+    navbarTitle.innerText = "TikTok";
 
     tiktokMenu.classList.add("active");
 
