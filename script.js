@@ -97,3 +97,74 @@ setelanMenu.addEventListener("click", () => {
     setelanMenu.classList.add("active");
 
 });
+
+/* TIKTOK DOWNLOADER */
+
+const downloadBtn = document.getElementById("download-btn");
+const tiktokUrl = document.getElementById("tiktok-url");
+const result = document.getElementById("result");
+
+downloadBtn.addEventListener("click", async () => {
+
+    const url = tiktokUrl.value;
+
+    if(url === ""){
+
+        result.innerHTML = `
+        <div class="result-box">
+            <h3>ERROR</h3>
+            <p>Masukkan link TikTok.</p>
+        </div>
+        `;
+
+        return;
+
+    }
+
+    result.innerHTML = `
+    <div class="result-box">
+        <h3>LOADING...</h3>
+        <p>Mengambil video TikTok...</p>
+    </div>
+    `;
+
+    try{
+
+        const response = await fetch(
+        `https://tikwm.com/api/?url=${url}`
+        );
+
+        const data = await response.json();
+
+        const video = data.data.play;
+        const music = data.data.music;
+        const title = data.data.title;
+
+        result.innerHTML = `
+        <div class="result-box">
+
+            <h3>${title}</h3>
+
+            <a href="${video}" target="_blank">
+                DOWNLOAD MP4
+            </a>
+
+            <a href="${music}" target="_blank">
+                DOWNLOAD MP3
+            </a>
+
+        </div>
+        `;
+
+    }catch(error){
+
+        result.innerHTML = `
+        <div class="result-box">
+            <h3>ERROR</h3>
+            <p>Gagal mengambil data TikTok.</p>
+        </div>
+        `;
+
+    }
+
+});
