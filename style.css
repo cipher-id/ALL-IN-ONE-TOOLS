@@ -169,3 +169,34 @@ body{
 .sidebar ul li:hover{
     transform: scale(1.05);
 }
+
+.hero h1{
+    font-size: 55px;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+@media(max-width: 768px){
+
+    .sidebar{
+        width: 180px;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 35px;
+    }
+
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .info-box{
+        padding: 20px;
+    }
+
+    .content{
+        padding: 20px;
+    }
+
+}
