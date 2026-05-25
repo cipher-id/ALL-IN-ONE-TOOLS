@@ -9,6 +9,7 @@ const nextMenu = document.getElementById("next-menu");
 const setelanMenu = document.getElementById("setelan-menu");
 const youtubeMenu = document.getElementById("youtube-menu");
 const passwordMenu = document.getElementById("password-menu");
+const phoneMenu = document.getElementById("phone-menu");
 
 /* PAGE */
 
@@ -18,6 +19,7 @@ const nextPage = document.getElementById("next-page");
 const setelanPage = document.getElementById("setelan-page");
 const youtubePage = document.getElementById("youtube-page");
 const passwordPage = document.getElementById("password-page");
+const phonePage = document.getElementById("phone-page");
 
 /* NAVBAR */
 
@@ -33,6 +35,7 @@ function hideAllPages(){
     setelanPage.classList.add("hidden");
     youtubePage.classList.add("hidden");
     passwordPage.classList.add("hidden");
+    phonePage.classList.add("hidden");
 
 }
 
@@ -44,6 +47,7 @@ function removeActive(){
     tiktokMenu.classList.remove("active");
     nextMenu.classList.remove("active");
     setelanMenu.classList.remove("active");
+    phoneMenu.classList.remove("active");
 
 }
 
@@ -59,6 +63,23 @@ homeMenu.addEventListener("click", () => {
     navbarTitle.innerText = "HOME";
 
     homeMenu.classList.add("active");
+    sidebar.classList.remove("active-sidebar");
+
+});
+
+/* PHONE INFO */
+
+phoneMenu.addEventListener("click", () => {
+
+    hideAllPages();
+    removeActive();
+
+    phonePage.classList.remove("hidden");
+
+    navbarTitle.innerText = "CEK NOMOR";
+
+    phoneMenu.classList.add("active");
+
     sidebar.classList.remove("active-sidebar");
 
 });
@@ -398,5 +419,140 @@ copyPasswordBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(generatedPassword);
 
     alert("Password berhasil disalin");
+
+});
+
+/* CEK NOMOR */
+
+const phoneBtn =
+document.getElementById("phone-btn");
+
+const phoneInput =
+document.getElementById("phone-input");
+
+const phoneResult =
+document.getElementById("phone-result");
+
+const phoneClearBtn =
+document.getElementById("phone-clear-btn");
+
+/* SCAN */
+
+phoneBtn.addEventListener("click", () => {
+
+    const number = phoneInput.value;
+
+    if(number === ""){
+
+        phoneResult.innerHTML = `
+        <div class="result-box">
+            <h3>ERROR</h3>
+            <p>Masukkan nomor telepon.</p>
+        </div>
+        `;
+
+        return;
+
+    }
+
+    let provider = "Unknown";
+    let country = "Unknown";
+    let type = "Mobile";
+    let status = "VALID";
+
+    /* COUNTRY */
+
+    if(
+        number.startsWith("+62") ||
+        number.startsWith("08")
+    ){
+
+        country = "Indonesia";
+
+    }
+
+    /* PROVIDER */
+
+    if(
+
+        number.startsWith("0811") ||
+        number.startsWith("0812") ||
+        number.startsWith("0813")
+
+    ){
+
+        provider = "Telkomsel";
+
+    }
+
+    else if(
+
+        number.startsWith("0895") ||
+        number.startsWith("0896") ||
+        number.startsWith("0897")
+
+    ){
+
+        provider = "Tri";
+
+    }
+
+    else if(
+
+        number.startsWith("0881") ||
+        number.startsWith("0882")
+
+    ){
+
+        provider = "Smartfren";
+
+    }
+
+    else if(
+
+        number.startsWith("0817") ||
+        number.startsWith("0818")
+
+    ){
+
+        provider = "XL Axiata";
+
+    }
+
+    /* VALIDATION */
+
+    if(number.length < 10){
+
+        status = "INVALID";
+
+    }
+
+    phoneResult.innerHTML = `
+    <div class="result-box">
+
+        <h3>HASIL CEK</h3>
+
+        <p><b>Number :</b> ${number}</p>
+
+        <p><b>Country :</b> ${country}</p>
+
+        <p><b>Provider :</b> ${provider}</p>
+
+        <p><b>Type :</b> ${type}</p>
+
+        <p><b>Status :</b> ${status}</p>
+
+    </div>
+    `;
+
+});
+
+/* CLEAR */
+
+phoneClearBtn.addEventListener("click", () => {
+
+    phoneInput.value = "";
+
+    phoneResult.innerHTML = "";
 
 });
