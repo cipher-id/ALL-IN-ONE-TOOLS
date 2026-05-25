@@ -24,6 +24,36 @@ body{
     color: white;
 }
 
+.hidden{
+    display: none;
+}
+
+/* Input */
+
+.input-box{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #1a1a1a;
+    border: 1px solid #00ff99;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}
+
+/* Button */
+
+.download-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background: #00ff99;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Sidebar */
 
 .sidebar{
