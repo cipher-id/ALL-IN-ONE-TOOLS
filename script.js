@@ -53,6 +53,7 @@ homeMenu.addEventListener("click", () => {
     navbarTitle.innerText = "HOME";
 
     homeMenu.classList.add("active");
+    sidebar.classList.remove("active-sidebar");
 
 });
 
