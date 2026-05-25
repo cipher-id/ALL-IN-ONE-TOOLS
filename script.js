@@ -323,3 +323,80 @@ passwordMenu.addEventListener("click", () => {
     sidebar.classList.remove("active-sidebar");
     passwordMenu.classList.remove("active");
 });
+
+/* PASSWORD GENERATOR */
+
+const generatePasswordBtn =
+document.getElementById("generate-password-btn");
+
+const passwordLength =
+document.getElementById("password-length");
+
+const passwordResult =
+document.getElementById("password-result");
+
+let generatedPassword = "";
+
+generatePasswordBtn.addEventListener("click", () => {
+
+    const length = passwordLength.value;
+
+    if(length === ""){
+
+        passwordResult.innerHTML = `
+        <div class="result-box">
+            <h3>ERROR</h3>
+            <p>Masukkan panjang password.</p>
+        </div>
+        `;
+
+        return;
+
+    }
+
+    const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+
+    let password = "";
+
+    for(let i = 0; i < length; i++){
+
+        password += chars.charAt(
+        Math.floor(Math.random() * chars.length)
+        );
+
+    }
+
+    generatedPassword = password;
+
+    passwordResult.innerHTML = `
+    <div class="result-box">
+
+        <h3>PASSWORD</h3>
+
+        <p style="
+        word-break: break-all;
+        margin-top: 15px;
+        ">
+        ${password}
+        </p>
+
+    </div>
+    `;
+
+});
+
+/* COPY PASSWORD */
+
+const copyPasswordBtn =
+document.getElementById("copy-password-btn");
+
+copyPasswordBtn.addEventListener("click", () => {
+
+    if(generatedPassword === "") return;
+
+    navigator.clipboard.writeText(generatedPassword);
+
+    alert("Password berhasil disalin");
+
+});
