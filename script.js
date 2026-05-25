@@ -69,6 +69,7 @@ tiktokMenu.addEventListener("click", () => {
     navbarTitle.innerText = "TIKTOK";
 
     tiktokMenu.classList.add("active");
+    sidebar.classList.remove("active-sidebar");
 
 });
 
@@ -84,6 +85,7 @@ nextMenu.addEventListener("click", () => {
     navbarTitle.innerText = "NEXT UPDATE";
 
     nextMenu.classList.add("active");
+    sidebar.classList.remove("active-sidebar");
 
 });
 
@@ -99,6 +101,7 @@ setelanMenu.addEventListener("click", () => {
     navbarTitle.innerText = "SETELAN";
 
     setelanMenu.classList.add("active");
+    sidebar.classList.remove("active-sidebar");
 
 });
 
