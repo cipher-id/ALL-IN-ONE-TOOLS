@@ -86,7 +86,7 @@ settingsMenu.addEventListener("click", () => {
 
     settingsPage.classList.remove("hidden");
 
-    navbarTitle.innerText = "setelan";
+    navbarTitle.innerText = "Setelan";
 
     settingsMenu.classList.add("active");
 
