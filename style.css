@@ -130,3 +130,25 @@ body{
 .hero button:hover{
     box-shadow: 0 0 20px #00ff99;
 }
+
+/* Info Box */
+
+.info-box{
+    margin-top: 40px;
+    background: #111;
+    border: 1px solid #00ff99;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0,255,153,0.1);
+}
+
+.info-box h2{
+    color: #00ff99;
+    margin-bottom: 20px;
+}
+
+.info-box p{
+    color: #aaa;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
