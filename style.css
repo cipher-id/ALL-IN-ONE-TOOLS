@@ -152,3 +152,11 @@ body{
     margin-bottom: 15px;
     line-height: 1.7;
 }
+
+.sidebar ul li{
+    transform: scale(1);
+}
+
+.sidebar ul li:hover{
+    transform: scale(1.05);
+}
