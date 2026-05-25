@@ -1,5 +1,8 @@
 /* MENU */
+/* SIDEBAR */
 
+const sidebar = document.querySelector(".sidebar");
+const menuToggle = document.getElementById("menu-toggle");
 const homeMenu = document.getElementById("home-menu");
 const tiktokMenu = document.getElementById("tiktok-menu");
 const nextMenu = document.getElementById("next-menu");
