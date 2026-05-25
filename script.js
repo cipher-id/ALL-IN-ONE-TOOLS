@@ -256,28 +256,38 @@ youtubeDownloadBtn.addEventListener("click", async () => {
 
     try{
 
-        const response = await fetch(
-        `https://api.vevioz.com/api/button/mp4/${url}`
-        );
+    const api =
+    `https://www.tikwm.com/api/?url=${url}`;
 
-        const data = await response.text();
+    const response = await fetch(api);
 
-        youtubeResult.innerHTML = `
-        <div class="result-box">
-            ${data}
-        </div>
-        `;
+    const data = await response.json();
 
-    }catch(error){
+    console.log(data);
 
-        youtubeResult.innerHTML = `
-        <div class="result-box">
-            <h3>ERROR</h3>
-            <p>Gagal mengambil video.</p>
-        </div>
-        `;
+    youtubeResult.innerHTML = `
+    <div class="result-box">
+
+        <h3>Video ditemukan</h3>
+
+        <a href="${url}" target="_blank">
+            BUKA YOUTUBE
+        </a>
+
+    </div>
+    `;
+
+}catch(error){
+
+    youtubeResult.innerHTML = `
+    <div class="result-box">
+        <h3>ERROR</h3>
+        <p>Gagal mengambil video YouTube.</p>
+    </div>
+    `;
 
     }
+
 
     /* CLEAR YOUTUBE */
 
