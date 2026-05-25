@@ -75,15 +75,24 @@ body{
 /* Button */
 
 .download-btn{
+
     width: 100%;
-    margin-top: 20px;
     padding: 15px;
-    background: #00ff99;
-    color:black;
+    margin-top: 20px;
+
     border: none;
     border-radius: 10px;
+
+    background: #00ff99;
+
+    color: black;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
     font-weight: bold;
+
     cursor: pointer;
+
 }
 
 /* Sidebar */
